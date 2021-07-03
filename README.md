@@ -49,10 +49,10 @@ public class EquipmentInfoParser
 	{
 		for(int index = 0; CSV.Length; index++)
 		{
-				if(CSV.Row[index].Equals("parsedData"))
-				{
-						// Do your Algorithm of parser..
-				}
+			if(CSV.Row[index].Equals("parsedData"))
+			{
+				// Do your Algorithm of parser..
+			}
 		}
 	}
 }
@@ -72,7 +72,7 @@ public class TextFileReader : IFileReader
 		StreamReader streamReader = StreamReader(this.Path);
 		while(!reader.EndOfStream)
 		{
-				Lines.Add(reader.ReadLine());
+			Lines.Add(reader.ReadLine());
 		}
 	}
 }
