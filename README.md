@@ -15,7 +15,7 @@ public class Parser
         StreamReader streamReader = StreamReader(path;)
         whie(!reader.EndOfStream)
         {
-            lines.Add(reader.ReadLine());
+			lines.Add(reader.ReadLine());
         }
 
         string splitCSV = string.Empty;
