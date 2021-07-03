@@ -8,7 +8,7 @@ Class의 역할(책임)이 무엇인지 분명히 하고, 객체에서 갖는 �
 <pre><code>
 public class Parser
 {
-    public string path {get; set;}
+	public string path {get; set;}
     public List<string>lines {get; set;}
     public void Parse()
     {
