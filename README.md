@@ -34,4 +34,66 @@ public class Parser
     }
 }
 </code></pre>
+
+### Good Way
+<pre><code>
+public class EquipmentInfoParser
+{
+		public CommaSeparatedValues CSV ( get; private set; )
+		public EquipmentInfoParser(CSV csv)
+		{
+				this.CSV = csv;
+		}
+
+		public void Parse()
+		{
+				for(int index = 0; CSV.Length; index++)
+				{
+						if(CSV.Row[index].Equals("parsedData"))
+						{
+								// Do your Algorithm of parser..
+						}
+				}
+		}
+}
+
+public interface IFileReader
+{
+		List<string> Lines { get; }
+}
+
+public class TextFileReader : IFileReader
+{
+		public string Path { get; private set; }
+		public List<string> Lines { get; private set; }
+		public void ReadFile(string path)
+		{
+				this.Parh = path;
+				StreamReader streamReader = StreamReader(this.Path);
+				while(!reader.EndOfStream)
+				{
+						Lines.Add(reader.ReadLine());
+				}
+		}
+}
+
+
+public class CommaSeparatedValues
+{
+		private IFileReader fileReader = null;
+		public Rows row { get; private set; } // 생략
+		public Columns column { get; private set; } // 생략
+		public CommaSeparatedValues(IFileReader fileReader)
+		{
+				this.fileReader = fileReader;
+		}
+		public void ParseToCSV()
+		{
+				foreach(string line in this.Lines)
+				{
+						// Do line.split(',');
+				}
+		}
+}
+</code></pre>
 <hr/>
